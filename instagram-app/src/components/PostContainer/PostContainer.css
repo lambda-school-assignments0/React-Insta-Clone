@@ -1,0 +1,36 @@
+.PostContainer {
+    /* temporary border */
+    border: 1px red solid;
+
+    /* spacing */
+    width: 600px;
+    margin: 0 auto;
+
+    /* font */
+    font-size: 15px;
+}
+
+.PostContainer .PostHeader {
+    /* display: flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* spacing */
+    margin: 20px;
+
+    /* font */
+    font-weight: bold
+}
+
+.PostContainer .PostHeader img {
+    width: 30px;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+.PostContainer .PostImg img{
+    width: 100%;
+}

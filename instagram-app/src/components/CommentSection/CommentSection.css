@@ -1,0 +1,9 @@
+.CommentSection {
+    margin: 5px 20px;
+}
+
+.CommentSection a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
