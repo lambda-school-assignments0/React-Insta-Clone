@@ -1,33 +1,52 @@
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6, div, p, span {
-  color: black;
-  font-family: 'Roboto', sans-serif;
+    color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .App {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 .Header {
-  /* display: flex */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    /* display: flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-  /* spacing */
-  margin: 20px;
+    /* spacing */
+    margin: 20px;
 
-  /* font */
-  font-size: 32px;
+    /* font */
+    font-size: 32px;
 }
 
-.Header .LeftSection img{
-  height: 32px;
+.Header .LeftSection img {
+    /* resize image */
+    height: 35px;
+
+    /* position */
+    position: relative;
+    top: 7px;
+
+    /* spacing */
+    margin-left: 20px;
+    padding-left: 15px;
+
+    /* border */
+    border-left: 1px black solid;
+}
+
+.Header .RightSection i {
+    margin-left: 15px;
+}
+.Header .RightSection i:first-child {
+    margin: 0px;
 }
