@@ -17,23 +17,29 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      instagramPosts: dummyData,
+      instagramPosts: [],
     }
   }
+
+  componentDidMount() {
+    console.log('CDM running...');
+    this.setState( {instagramPosts: dummyData });
+  }
+
   render() {
     return (
       <div className="App">
         <header className='Header'>
           <div className='LeftSection'>
-              <i className='fab fa-instagram'></i><img src={InstagramLogo} alt='instagram-logo' />
+              <i className='fab fa-instagram' /><img src={InstagramLogo} alt='instagram-logo' />
           </div>
           <div className='MiddleSection'>
               <SearchBar />
           </div>
           <div className='RightSection'>
-              <i className='far fa-compass'></i>
-              <i className='far fa-heart'></i>
-              <i className='far fa-user'></i>
+              <i className='far fa-compass' />
+              <i className='far fa-heart' />
+              <i className='far fa-user' />
           </div>
       </header>
         {this.state.instagramPosts.map(post => (

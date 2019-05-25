@@ -9,21 +9,24 @@ import './PostContainer.css';
 class PostContainer extends React.Component {
 
     render() {
-        console.log(this)
         return (
             <div className='PostContainer'>
                 <div className='PostHeader'>
                     <img src={this.props.post.thumbnailUrl} alt={this.props.post.username} />
                     {this.props.post.username}
                 </div>
+
                 <div className='PostImg'>
                     <img src={this.props.post.imageUrl} alt={this.props.post.imageUrl} />
                 </div>
-                <div className='PostComments'>
-                    {this.props.post.comments.map(comment => (
-                        <CommentSection comment={comment}/>
-                    ))}
+
+                <div className='PostLikeComment'>
+                    <i className='far fa-heart' />
+                    <i className='far fa-comment fa-flip-horizontal' />
+                    <p>999 likes</p>
                 </div>
+
+                <CommentSection comments={this.props.post.comments}/>
             </div>
         );
     }

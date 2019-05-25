@@ -5,11 +5,21 @@ import './CommentSection.css';
 
 class CommentSection extends React.Component {
     
+    addNewComment() {
+        console.log('adding comment...');
+    }
+
     render() {
         console.log(this)
         return (
             <div className='CommentSection'>
-                <a href='#'>{this.props.comment.username}</a> {this.props.comment.text}
+                    {this.props.comments.map(comment => {
+                        return( <p><a href='#'>{comment.username}</a> {comment.text}</p> )
+                    })}
+
+                    <div className='AddCommentSection'>
+                        <input className='AddComment' placeholder='Add a comment...'></input>
+                    </div>
             </div>
         );
     }

@@ -2,8 +2,26 @@
     margin: 5px 20px;
 }
 
-.CommentSection a {
+.CommentSection p {
+    line-height: 10px;
+}
+
+.CommentSection p a {
     font-weight: bold;
     color: black;
     text-decoration: none;
+}
+
+.CommentSection .AddCommentSection {
+    border-top: 1px #e6e6e6 solid;
+}
+
+.CommentSection .AddComment {
+    border: none;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.CommentSection .AddComment:focus {
+    outline: none;
 }

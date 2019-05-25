@@ -33,6 +33,19 @@
     margin-right: 10px;
 }
 
-.PostContainer .PostImg img{
+.PostContainer .PostImg img {
     width: 100%;
+}
+
+.PostContainer .PostLikeComment {
+    margin: 10px 0;
+    margin-left: 20px;
+
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.PostContainer .PostLikeComment i {
+    font-size: 26px;
+    margin-right: 15px;
 }
