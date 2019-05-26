@@ -4,21 +4,44 @@ import React from 'react';
 import './CommentSection.css';
 
 class CommentSection extends React.Component {
-    
-    addNewComment() {
-        console.log('adding comment...');
+    constructor(props) {
+        super(props);
+
+        const initialState = {
+            comments: this.props.comments,
+            newComment: '',
+        }
+
+        this.state = initialState
     }
 
+    
+
+    handleChanges = e => {
+        console.log('handling changes...')
+        this.setState( {newComment: e.target.value });
+    };
+
+    addNewComment = e => {
+        e.preventDefault();
+        console.log('adding comment...');
+        this.setState({
+            comments: [...this.state.comments, {username: 'curr_user', text: this.state.newComment}],
+            newComment: ''
+        })
+    };
+
     render() {
-        console.log(this)
         return (
             <div className='CommentSection'>
-                    {this.props.comments.map(comment => {
+                    {this.state.comments.map(comment => {
                         return( <p><a href='#'>{comment.username}</a> {comment.text}</p> )
                     })}
 
                     <div className='AddCommentSection'>
-                        <input className='AddComment' placeholder='Add a comment...'></input>
+                        <form onSubmit={this.addNewComment}>
+                            <input className='AddComment' type='text' value={this.state.newComment} onChange={this.handleChanges} placeholder='Add a comment...'></input>
+                        </form>
                     </div>
             </div>
         );
