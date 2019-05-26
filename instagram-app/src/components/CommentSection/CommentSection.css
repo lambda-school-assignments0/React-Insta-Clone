@@ -2,6 +2,26 @@
     margin: 5px 20px;
 }
 
+.CommentSection .LikeComment {
+    margin: 10px 0;
+
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.CommentSection .LikeComment i {
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+.CommentSection .LikeComment i:hover {
+    cursor: pointer;
+}
+
+.CommentSection .LikeComment .ico-like.fas {
+    color: red;
+}
+
 .CommentSection p {
     line-height: 10px;
 }

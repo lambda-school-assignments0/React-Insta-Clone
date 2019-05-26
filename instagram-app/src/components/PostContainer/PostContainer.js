@@ -20,12 +20,6 @@ class PostContainer extends React.Component {
                     <img src={this.props.post.imageUrl} alt={this.props.post.imageUrl} />
                 </div>
 
-                <div className='PostLikeComment'>
-                    <i className='far fa-heart' />
-                    <i className='far fa-comment fa-flip-horizontal' />
-                    <p>999 likes</p>
-                </div>
-
                 <CommentSection comments={this.props.post.comments}/>
             </div>
         );
