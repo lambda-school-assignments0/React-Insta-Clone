@@ -3,6 +3,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+
+    background-color: #FAFAFA;
 }
 
 h1, h2, h3, h4, h5, h6, div, p, span {
@@ -15,6 +17,15 @@ h1, h2, h3, h4, h5, h6, div, p, span {
 }
 
 .Header {
+    /* background */
+    background-color: white;
+
+    /* border */
+    border-bottom: 1px #e6e6e6 solid;
+
+    /* position */
+    /* position: absolute; */
+
     /* display: flex */
     display: flex;
     flex-direction: row;
@@ -22,7 +33,7 @@ h1, h2, h3, h4, h5, h6, div, p, span {
     align-items: center;
 
     /* spacing */
-    margin: 20px;
+    padding: 20px;
 
     /* font */
     font-size: 32px;

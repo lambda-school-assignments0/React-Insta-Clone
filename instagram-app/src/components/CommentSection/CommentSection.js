@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
             comments: this.props.comments,
             newComment: '',
             likeStatus: 'far',
-            likes: 25,
+            likes: this.props.likes,
         }
 
         this.state = initialState
@@ -56,8 +56,8 @@ class CommentSection extends React.Component {
                         <p>{this.state.likes} likes</p>
                     </div>
 
-                    {this.state.comments.map(comment => {
-                        return( <p><a href='#'>{comment.username}</a> {comment.text}</p> )
+                    {this.state.comments.map((comment, idx) => {
+                        return( <p className='Comment' key={idx}><a href={`https://www.instagram.com/${comment.username}/`}>{comment.username}</a> {comment.text}</p> )
                     })}
 
                     <div className='AddCommentSection'>

@@ -4,15 +4,20 @@ import React from 'react';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
+
     render() {
+        console.log(this);
         return (
-            <input
-                type='text'
-                placeholder='Search'
-                name='search-bar'
-                className='SearchBar'
-            >
-            </input>
+            <form onSubmit={this.props.handleSearch}>
+                <input
+                    type='text'
+                    placeholder='Search'
+                    name='search-bar'
+                    value={this.props.searchPosts}
+                    onChange={this.props.handleChange}
+                    className='SearchBar'
+                />
+            </form>
         );
     }
 }

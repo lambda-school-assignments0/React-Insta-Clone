@@ -13,14 +13,14 @@ class PostContainer extends React.Component {
             <div className='PostContainer'>
                 <div className='PostHeader'>
                     <img src={this.props.post.thumbnailUrl} alt={this.props.post.username} />
-                    {this.props.post.username}
+                    <a href={`https://www.instagram.com/${this.props.post.username}/`}>{this.props.post.username}</a>
                 </div>
 
                 <div className='PostImg'>
                     <img src={this.props.post.imageUrl} alt={this.props.post.imageUrl} />
                 </div>
 
-                <CommentSection comments={this.props.post.comments}/>
+                <CommentSection likes={this.props.post.likes} comments={this.props.post.comments}/>
             </div>
         );
     }

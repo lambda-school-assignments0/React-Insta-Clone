@@ -26,6 +26,11 @@
     font-weight: bold
 }
 
+.PostContainer .PostHeader a {
+    text-decoration: none;
+    color: black;
+}
+
 .PostContainer .PostHeader img {
     width: 30px;
     border-radius: 50%;
