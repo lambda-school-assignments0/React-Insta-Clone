@@ -38,6 +38,10 @@ class CommentSection extends React.Component {
         this.setState( {newComment: e.target.value });
     };
 
+    handleFocus = e => {
+        document.querySelector('.AddComment').focus();
+    }
+
     addNewComment = e => {
         e.preventDefault();
         console.log('adding comment...');
@@ -52,7 +56,7 @@ class CommentSection extends React.Component {
             <div className='CommentSection'>
                     <div className='LikeComment'>
                         <i className={`ico-like ${this.state.likeStatus} fa-heart`} onClick={this.toggleLike}/>
-                        <i className='ico-comment far fa-comment fa-flip-horizontal' />
+                        <i className='ico-comment far fa-comment fa-flip-horizontal' onClick={this.handleFocus}/>
                         <p>{this.state.likes} likes</p>
                     </div>
 

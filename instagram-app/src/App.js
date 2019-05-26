@@ -28,12 +28,15 @@ class App extends React.Component {
     this.setState( {instagramPosts: dummyData });
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleSearch = e => {
+    e.preventDefault();
+    this.setState({
+      instagramPosts: dummyData.filter(data => data.username.includes(`${this.state.searchPosts}`))
+    })
   }
 
-  handleSearch = e => {
-
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {

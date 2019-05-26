@@ -24,7 +24,9 @@ h1, h2, h3, h4, h5, h6, div, p, span {
     border-bottom: 1px #e6e6e6 solid;
 
     /* position */
-    /* position: absolute; */
+    position: fixed;
+    top: 0px;
+    width: 100%;
 
     /* display: flex */
     display: flex;
@@ -33,7 +35,7 @@ h1, h2, h3, h4, h5, h6, div, p, span {
     align-items: center;
 
     /* spacing */
-    padding: 20px;
+    padding: 15px;
 
     /* font */
     font-size: 32px;

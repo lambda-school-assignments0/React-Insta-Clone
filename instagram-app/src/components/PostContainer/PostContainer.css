@@ -5,11 +5,15 @@
 
     /* spacing */
     width: 600px;
-    margin: 20px auto;
+    margin: 25px auto;
     padding: 5px;
 
     /* font */
     font-size: 15px;
+}
+
+.PostContainer:first-of-type {
+    margin-top: 112px;
 }
 
 .PostContainer .PostHeader {
