@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, div, p, span {
     /* position */
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: calc(100% - 30px);
 
     /* display: flex */
     display: flex;
