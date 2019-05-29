@@ -7,8 +7,8 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 class PostContainer extends React.Component {
-
     render() {
+        // console.log(this);
         return (
             <div className='PostContainer'>
                 <div className='PostHeader'>
@@ -20,7 +20,7 @@ class PostContainer extends React.Component {
                     <img src={this.props.post.imageUrl} alt={this.props.post.imageUrl} />
                 </div>
 
-                <CommentSection likes={this.props.post.likes} comments={this.props.post.comments}/>
+                <CommentSection likes={this.props.post.likes} comments={this.props.post.comments} user={this.props.user}/>
             </div>
         );
     }

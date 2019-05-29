@@ -46,7 +46,7 @@ class CommentSection extends React.Component {
         e.preventDefault();
         console.log('adding comment...');
         this.setState({
-            comments: [...this.state.comments, {username: 'curr_user', text: this.state.newComment}],
+            comments: [...this.state.comments, {username: this.props.user, text: this.state.newComment}],
             newComment: ''
         })
     };
